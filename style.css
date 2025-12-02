@@ -1,0 +1,147 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #222;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5vw;
+    background: #000;
+    color: #fff;
+    position: sticky;
+    top: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.nav-links a:hover {
+    color: #ff4d6d;
+}
+
+/* Hero */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10vh 5vw;
+    background: #fff;
+}
+
+.profile-img {
+    width: 30vw;
+    max-width: 300px;
+    border-radius: 20px;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.role {
+    color: #ff4d6d;
+    animation: colorChange 3s infinite alternate;
+}
+
+.btn {
+    background: #ff4d6d;
+    color: #fff;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* Sections */
+.about, .skills, .projects, .contact {
+    padding: 10vh 5vw;
+    text-align: center;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    background: #ffe0e6;
+}
+
+/* Contact */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, textarea {
+    padding: 1rem;
+    border-radius: 8px;
+    border: 1px solid #888;
+}
+
+/* Footer */
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes colorChange {
+    0% {color: #ff4d6d;}
+    100% {color: #6a00f4;}
+}
+
+/* Media Query */
+@media(max-width:768px){
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-img {
+        margin-top: 2rem;
+        width: 50vw;
+    }
+}
